@@ -11,7 +11,7 @@ app.use(express.json());
 // Database connection setup
 const pool = new Pool({
   user: process.env.DB_USER || 'projectdb',
-  host: process.env.DB_HOST || '192.168.202.13',
+  host: process.env.DB_HOST || '192.168.202.20',
   database: process.env.DB_DATABASE || 'projectdb',
   password: process.env.DB_PASSWORD || 'projectdb',
   port: process.env.DB_PORT || 5432,
