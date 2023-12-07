@@ -58,10 +58,10 @@ jobs:
     #     git remote add helm-origin https://${{ secrets.PROJECT_TOKEN }}@github.com/Mazurovsasha/project-helm.git
     #     # git push --force --set-upstream helm-origin master "${GH_TOKEN}"
     #     git push -u helm-origin master
-    - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2
-      env:
-       SLACK_CHANNEL: "incoming-webhooks"
-       SLACK_WEBHOOK: "https://hooks.slack.com/services/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"
-      with:
-       status: ${{ job.status }}
+    # - name: Slack Notification
+    #   uses: rtCamp/action-slack-notify@v2
+    #   env:
+    #    SLACK_CHANNEL: "incoming-webhooks"
+    #    SLACK_WEBHOOK: "https://hooks.slack.com/services/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"
+    #   with:
+    #    status: ${{ job.status }}
