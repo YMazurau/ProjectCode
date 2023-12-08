@@ -66,7 +66,7 @@ module.exports = (pool) => {
         const tableDiv = `<div id="userTable" style="display: none;">${tableContent}</div>`;
 
         const htmlContent = `
-          <h1>User Data</h1>
+          <h1>Yauheni Mazurau Project</h1>
           ${form}
           ${toggleButton}
           ${clearButton}

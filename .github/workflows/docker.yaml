@@ -46,18 +46,24 @@ jobs:
       run: |
         sed -i 's/tag:.*/tag: ${{ steps.get_version.outputs.version }}/g' ./project/values.yaml
 
-    # - name: Commit and push changes to values.yaml
-    #   run: |
-    #     export GH_TOKEN=${{ secrets.PROJECT_TOKEN }}
-    #     cd /home/runner/work/project/project/project/
-    #     git config --global user.email "mazurovsasha@gmail.com"
-    #     git config --global user.name "Alexsandr Mazurov"
-    #     git branch -m master
-    #     git add .
-    #     git commit -m "Update values.yaml v${{ steps.get_version.outputs.version }}"
-    #     git remote add helm-origin https://${{ secrets.PROJECT_TOKEN }}@github.com/Mazurovsasha/project-helm.git
-    #     # git push --force --set-upstream helm-origin master "${GH_TOKEN}"
-    #     git push -u helm-origin master
+    - name: Set up SSH keys
+      run: |
+        sudo apt-get install -y openssh-client
+        mkdir -p ~/.ssh/
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+    - name: Commit and push changes to values.yaml
+      run: |
+        git config --global user.email "mazurov1804@gmail.com"
+        git config --global user.name "Yauheni Mazurau"
+        git add .
+        git commit -m "Update values.yaml v${{ steps.get_version.outputs.version }}"
+        git remote rm origin
+        git remote add origin git@github.com:YMazurau/ProjectHelm.git
+        git push -u origin master
+
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
