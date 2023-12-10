@@ -109,7 +109,7 @@ WARNING! If you clone git repositories, delete the folder .husky/ and only then 
 [https://typicode.github.io/husky/getting-started.html]
 
 
-## SLACK_WEBHOOK   [https://github.com/rtCamp/action-slack-notify]
+# Slack nitification  [https://github.com/rtCamp/action-slack-notify]
 
 Create SLACK_WEBHOOK secret using GitHub Action's Secret. You can generate a Slack incoming webhook token from here.
 [https://brosersstorage.slack.com/apps/A0F7XDUAZ-incoming-webhooks?tab=more_info]
@@ -117,3 +117,7 @@ Create SLACK_WEBHOOK secret using GitHub Action's Secret. You can generate a Sla
 ```
 ! WARNING ! In the upper corner, be sure to check which chat the alert is configured in.
 ```
+
+# Helm lint
+
+Checks for errors with the notification in slack
