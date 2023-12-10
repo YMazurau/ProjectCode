@@ -14,7 +14,7 @@
     "start": "node app.js",
     "prepare": "husky install"
   },
-  "author": "Yauheni Mazurov",
+  "author": "Yauheni Mazurau",
   "license": "MIT",
   "devDependencies": {
     "husky": "^8.0.0"
