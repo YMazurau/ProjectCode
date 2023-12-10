@@ -21,9 +21,9 @@ Create DB name "projectdb"
 ```
 CREATE DATABASE projectdb;
 ```
-Create username "projectdb" pass "projectdb"
+Create username "projectdb" pass "xxx"
 ```
-CREATE USER projectdb WITH PASSWORD 'projectdb';
+CREATE USER projectdb WITH PASSWORD 'xxx';
 ```
 Assign a user permission to the DB using the GRANT command
 ```
@@ -71,7 +71,7 @@ host    all             all             ::1/128                 trust
 local   replication     all                                     peer
 host    replication     all             127.0.0.1/32            md5
 host    replication     all             ::1/128                 md5
-host    all             all             192.168.203.8/32        md5
+host    all             all             xxx.xxx.xxx.8/32        md5
 host    all             all             0.0.0.0/0               md5
 host    all             all             ::/0                    md5
 ```
