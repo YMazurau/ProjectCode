@@ -120,4 +120,4 @@ Create SLACK_WEBHOOK secret using GitHub Action's Secret. You can generate a Sla
 
 # Helm lint
 
-Checks for errors with the notification in slack
+Checks for errors with the notification in slack.
