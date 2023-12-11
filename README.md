@@ -1,4 +1,4 @@
-# PostgreSQL xxxx.20
+# PostgreSQL xxx.20
 
 * Install
 
